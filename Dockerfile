@@ -30,8 +30,3 @@ RUN cd /root \
     && chmod u+x composer
 # Add our script files so they can be found
 ENV PATH /var/www/bin:/root/bin:~/.composer/vendor/bin:$PATH
-
-#############################################################################
-# Set permissions
-#############################################################################
-#RUN chown -R www-data:www-data /var/www/data
