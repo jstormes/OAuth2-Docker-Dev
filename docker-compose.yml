@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  oauth2:
+    build: .
+    environment:
+#        TZ: America/Los_Angeles  # PST
+#        TZ: America/Denver       # MST
+        TZ: America/Chicago      # CST
+#        TZ: America/New_York     # EST
+        XDEBUG_CONFIG: remote_host=host.docker.internal remote_port=9000 remote_autostart=1
+        PHP_IDE_CONFIG: serverName=host.docker.internal
+    ports:
+      - 8080:80
+    volumes:
+      - ./oauth2/:/var/www
+      - ./oauth2/public:/var/www/html

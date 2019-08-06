@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/oauth2/src/App" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/oauth2/test/AppTest" isTestSource="true" packagePrefix="AppTest\" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/container-interop/container-interop" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/doctrine/instantiator" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/fig/http-message-util" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/filp/whoops" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/league/plates" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/myclabs/deep-copy" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/nikic/fast-route" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/ocramius/package-versions" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/phar-io/manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/phar-io/version" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/phpdocumentor/reflection-common" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/phpdocumentor/reflection-docblock" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/phpdocumentor/type-resolver" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/phpspec/prophecy" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/phpunit/php-code-coverage" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/phpunit/php-file-iterator" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/phpunit/php-text-template" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/phpunit/php-timer" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/phpunit/php-token-stream" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/phpunit/phpunit" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/psr/http-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/psr/http-server-handler" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/psr/http-server-middleware" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/sebastian/code-unit-reverse-lookup" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/sebastian/comparator" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/sebastian/diff" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/sebastian/environment" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/sebastian/exporter" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/sebastian/global-state" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/sebastian/object-enumerator" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/sebastian/object-reflector" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/sebastian/recursion-context" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/sebastian/resource-operations" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/sebastian/version" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/squizlabs/php_codesniffer" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/symfony/polyfill-php73" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/symfony/service-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/theseer/tokenizer" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/zendframework/zend-code" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/zendframework/zend-component-installer" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/zendframework/zend-config-aggregator" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/zendframework/zend-diactoros" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/zendframework/zend-escaper" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/zendframework/zend-eventmanager" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/zendframework/zend-expressive" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/zendframework/zend-expressive-fastroute" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/zendframework/zend-expressive-helpers" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/zendframework/zend-expressive-platesrenderer" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/zendframework/zend-expressive-router" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/zendframework/zend-expressive-template" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/zendframework/zend-expressive-tooling" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/zendframework/zend-httphandlerrunner" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/zendframework/zend-servicemanager" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/zendframework/zend-stdlib" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/zendframework/zend-stratigility" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/zfcampus/zf-composer-autoloading" />
+      <excludeFolder url="file://$MODULE_DIR$/oauth2/vendor/zfcampus/zf-development-mode" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
