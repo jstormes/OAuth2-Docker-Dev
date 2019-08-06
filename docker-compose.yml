@@ -13,5 +13,7 @@ services:
     ports:
       - 8080:80
     volumes:
+      - ./bin:/root/bin
       - ./oauth2/:/var/www
       - ./oauth2/public:/var/www/html
+
