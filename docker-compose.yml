@@ -8,8 +8,6 @@ services:
 #        TZ: America/Denver       # MST
         TZ: America/Chicago      # CST
 #        TZ: America/New_York     # EST
-        XDEBUG_CONFIG: remote_host=host.docker.internal remote_port=9000 remote_autostart=1
-        PHP_IDE_CONFIG: serverName=host.docker.internal
     ports:
       - 8080:80
     volumes:

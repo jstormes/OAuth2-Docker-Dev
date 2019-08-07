@@ -43,9 +43,7 @@ RUN yes | pecl install xdebug \
     && echo "xdebug.idekey=oauth2docker" >> /usr/local/etc/php/conf.d/xdebug.ini
 
 ############################################################################
-# Add preflight to apache2-foreground
+# Add preflights to apache2-foreground
 ############################################################################
-# [ -f /tmp/filename.pid ] || python daemon.py restart
-RUN sed -i '3i[[ -f /root/bin/docker-preflight.sh ]] && bash /root/bin/docker-preflight.sh' /usr/local/bin/apache2-foreground
-RUN sed -i '4i[[ -f /var/www/bin/docker-preflight.sh ]] && bash /var/www/bin/docker-preflight.sh' /usr/local/bin/apache2-foreground
-
+RUN sed -i "3i[[ -f /root/bin/docker-preflight.sh ]] && bash /root/bin/docker-preflight.sh" /usr/local/bin/apache2-foreground \
+    && sed -i "4i[[ -f /var/www/bin/docker-preflight.sh ]] && bash /var/www/bin/docker-preflight.sh" /usr/local/bin/apache2-foreground
