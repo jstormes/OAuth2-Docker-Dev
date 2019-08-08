@@ -14,4 +14,21 @@ services:
       - ./bin:/root/bin
       - ./oauth2/:/var/www
       - ./oauth2/public:/var/www/html
+  redis:
+    image: redis
+  redisadmin:
+    image: erikdubbelboer/phpredisadmin
+    environment:
+#      - ADMIN_USER=admin
+#      - ADMIN_PASS=admin
+      - REDIS_1_HOST=redis
+      - REDIS_1_PORT=6379
+    ports:
+      - 8081:80
+  maridb:
+    image: mariadb
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    ports:
+      - 8082:80
 
