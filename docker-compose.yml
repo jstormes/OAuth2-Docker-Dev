@@ -1,13 +1,23 @@
 version: '3'
 
+############################################################################
+# Docker compose for local development
+#
+# Time Zones:
+#    America/Los_Angeles  # PST
+#    America/Denver       # MST
+#    America/Chicago      # CST
+#    America/New_York     # EST
+
+
 services:
   oauth2:
     build: .
     environment:
-#        TZ: America/Los_Angeles  # PST
-#        TZ: America/Denver       # MST
-        TZ: America/Chicago      # CST
-#        TZ: America/New_York     # EST
+      - TZ=America/Chicago
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=AhEP2678
+      - REDIS_HOST=redis
     ports:
       - 8080:80
     volumes:
@@ -19,16 +29,21 @@ services:
   redisadmin:
     image: erikdubbelboer/phpredisadmin
     environment:
-#      - ADMIN_USER=admin
-#      - ADMIN_PASS=admin
+      - TZ=America/Chicago
       - REDIS_1_HOST=redis
-      - REDIS_1_PORT=6379
     ports:
       - 8081:80
-  maridb:
+  db:
     image: mariadb
+    environment:
+      - TZ=America/Chicago
+      - MYSQL_ROOT_PASSWORD=AhEP2678
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
+    environment:
+      - TZ=America/Chicago
+      - PMA_USER=root
+      - PMA_PASSWORD=AhEP2678
     ports:
       - 8082:80
 
