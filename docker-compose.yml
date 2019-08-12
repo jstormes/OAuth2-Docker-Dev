@@ -46,4 +46,17 @@ services:
       - PMA_PASSWORD=AhEP2678
     ports:
       - 8082:80
+  ldap-service:
+    image: osixia/openldap
+    environment:
+      - LDAP_ORGANISATION="My Company"
+      - LDAP_DOMAIN="my-company.com"
+      - LDAP_ADMIN_PASSWORD="JonSn0w"
+  phpldapadmin-service:
+    image: osixia/phpldapadmin
+    environment:
+      - PHPLDAPADMIN_LDAP_HOSTS=ldap-service
+    ports:
+      - 8083:443
+
 
