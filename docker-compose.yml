@@ -48,10 +48,6 @@ services:
       - 8082:80
   ldap-service:
     image: osixia/openldap
-#    environment:
-#      - LDAP_ORGANISATION="My Company"
-#      - LDAP_DOMAIN="my-company.com"
-#      - LDAP_ADMIN_PASSWORD="JonSn0w"
   phpldapadmin-service:
     image: osixia/phpldapadmin
     environment:
