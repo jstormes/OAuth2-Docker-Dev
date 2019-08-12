@@ -30,7 +30,7 @@ RUN apt-get -y update \
     && mv composer.phar /usr/local/bin/composer \
     && chmod u+x /usr/local/bin/composer
 # Add our script files so they can be found
-ENV PATH /var/www/vendor/bin:/var/www/bin:/root/bin:~/.composer/vendor/bin:$PATH
+ENV PATH /var/www/vendor/bin:/var/www/bin:/root/bin:root/.composer/vendor/bin:$PATH
 
 ############################################################################
 # Setup XDebug, always try and start XDebug connection to requesting ip

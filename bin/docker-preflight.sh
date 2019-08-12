@@ -14,6 +14,7 @@ fi
 # Set execute permissions for tools
 ############################################################################
 chmod a+x /var/www/bin/*
+chmod a+x /root/bin/*
 
 ############################################################################
 # Install Composer Packages if they are not installed
