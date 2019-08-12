@@ -19,3 +19,5 @@ RedisAdmin will be available at http://localhost:8081.
 PhpLdapAdmin will be available at https://localhost:8083.
     Username: `cn=admin,dc=example,dc=org`
     Password: `admin`
+    
+ NOTES: https://stackoverflow.com/questions/997424/active-directory-vs-openldap
