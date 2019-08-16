@@ -75,7 +75,7 @@ It will take some time to start up.  During startup it will pull down a full
 set of services including, MariaDB, Redis, OpenLDAP and tools to access 
 these services.
 
-After startup the OAuth2 Zend Application will be available at 
+After startup the Zend Project will be available at 
 http://locahost:8080.
 
 PhpMyAdmin will be available at http://locahost:8082.
