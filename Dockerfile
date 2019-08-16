@@ -5,6 +5,7 @@ FROM php:7-apache
 ############################################################################
 RUN apt-get -y update \
     && apt-get install -y curl zip unzip libpng-dev libzip-dev \
+        inetutils-ping iproute2 \
     && apt-get -y autoremove \
     && apt-get -y clean \
     && yes '' | pecl install -f redis \
@@ -48,3 +49,5 @@ RUN yes | pecl install xdebug \
 ############################################################################
 RUN sed -i "3i[[ -f /root/bin/docker-preflight.sh ]] && bash /root/bin/docker-preflight.sh" /usr/local/bin/apache2-foreground \
     && sed -i "4i[[ -f /var/www/bin/docker-preflight.sh ]] && bash /var/www/bin/docker-preflight.sh" /usr/local/bin/apache2-foreground
+
+WORKDIR /var/www

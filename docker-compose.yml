@@ -11,7 +11,7 @@ version: '3'
 
 
 services:
-  oauth2:
+  auth-server:
     build: .
     environment:
       - TZ=America/Chicago
@@ -22,8 +22,8 @@ services:
       - 8080:80
     volumes:
       - ./bin:/root/bin
-      - ./oauth2/:/var/www
-      - ./oauth2/public:/var/www/html
+      - ./authorization-server/:/var/www
+      - ./authorization-server/public:/var/www/html
   redis:
     image: redis
   redisadmin:
