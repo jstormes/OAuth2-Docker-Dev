@@ -2,6 +2,9 @@
 
 Docker support environment for OAuth2 development on local machine.
 
+TODO: Change the nomenclature in the filesystem and namespace from 
+oauth2 and 'App' to Authorization Server.
+
 # Preface 
 
 As part of developing OAuth2 in PHP I needed a simple way to setup a

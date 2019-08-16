@@ -29,18 +29,19 @@ RUN apt-get -y update \
     && rm installer \
     && mv composer.phar /usr/local/bin/composer \
     && chmod u+x /usr/local/bin/composer
-# Add our script files so they can be found
+# Add our script files to the path so they can be found
 ENV PATH /var/www/vendor/bin:/var/www/bin:/root/bin:root/.composer/vendor/bin:$PATH
 
 ############################################################################
 # Setup XDebug, always try and start XDebug connection to requesting ip
+# DO NOT DO THIS ON PUBLICLY ACCESSABLE SYSTEMS!!!!!!!
 ############################################################################
 RUN yes | pecl install xdebug \
     && echo "zend_extension=$(find /usr/local/lib/php/extensions/ -name xdebug.so)" > /usr/local/etc/php/conf.d/xdebug.ini \
     && echo "xdebug.remote_enable=on" >> /usr/local/etc/php/conf.d/xdebug.ini \
     && echo "xdebug.remote_autostart=on" >> /usr/local/etc/php/conf.d/xdebug.ini \
     && echo "xdebug.remote_connect_back=on"  >> /usr/local/etc/php/conf.d/xdebug.ini \
-    && echo "xdebug.idekey=oauth2docker" >> /usr/local/etc/php/conf.d/xdebug.ini
+    && echo "xdebug.idekey=default-docker" >> /usr/local/etc/php/conf.d/xdebug.ini
 
 ############################################################################
 # Add preflights to apache2-foreground
