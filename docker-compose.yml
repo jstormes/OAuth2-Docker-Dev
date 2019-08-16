@@ -10,11 +10,14 @@ version: '3'
 #    America/New_York     # EST
 
 
+####### OAuth2 Authorization Server ########
 services:
   auth-server:
     build: .
     environment:
       - TZ=America/Chicago
+      - MYSQL_SERVER=db
+      - MYSQL_DB=auth
       - MYSQL_USER=root
       - MYSQL_PASSWORD=AhEP2678
       - REDIS_HOST=redis
@@ -24,6 +27,9 @@ services:
       - ./bin:/root/bin
       - ./authorization-server/:/var/www
       - ./authorization-server/public:/var/www/html
+
+
+####### Redis #######
   redis:
     image: redis
   redisadmin:
@@ -33,6 +39,9 @@ services:
       - REDIS_1_HOST=redis
     ports:
       - 8081:80
+
+
+####### Maria DB ########
   db:
     image: mariadb
     environment:
@@ -46,13 +55,14 @@ services:
       - PMA_PASSWORD=AhEP2678
     ports:
       - 8082:80
-  ldap-service:
+
+
+####### Open LDAP #######
+  ldap:
     image: osixia/openldap
-  phpldapadmin-service:
+  phpldapadmin:
     image: osixia/phpldapadmin
     environment:
-      - PHPLDAPADMIN_LDAP_HOSTS=ldap-service
+      - PHPLDAPADMIN_LDAP_HOSTS=ldap
     ports:
       - 8083:443
-
-
