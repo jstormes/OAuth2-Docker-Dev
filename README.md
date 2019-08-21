@@ -24,7 +24,7 @@ on the Internet at large.
 I want to be able to cascade the sources for user credentials.  
 Many times I have come across enterprise situations where the users
 credentials need to come from multiple sources.  This is frequently 
-Windows Active Directory over LDAP and MySQL a database.
+Windows Active Directory over LDAP and a MySQL database.
 
 # Data sources for clients
 
