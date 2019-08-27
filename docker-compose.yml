@@ -16,11 +16,8 @@ services:
     build: ./authorization-server
     environment:
       - TZ=America/Chicago
-      - MYSQL_SERVER=db
-      - MYSQL_DB=auth
-      - MYSQL_USER=root
-      - MYSQL_PASSWORD=AhEP2678
-      - REDIS_HOST=redis
+      - DB=mysql://root:AhEP2678@db/auth_db
+      - REDIS=redis
     ports:
       - 8080:80
     volumes:
