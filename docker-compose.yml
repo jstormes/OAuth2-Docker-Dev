@@ -13,7 +13,7 @@ version: '3'
 ####### OAuth2 Authorization Server ########
 services:
   auth-server:
-    build: .
+    build: ./authorization-server
     environment:
       - TZ=America/Chicago
       - MYSQL_SERVER=db
@@ -24,7 +24,6 @@ services:
     ports:
       - 8080:80
     volumes:
-      - ./bin:/root/bin
       - ./authorization-server/:/var/www
       - ./authorization-server/public:/var/www/html
 
