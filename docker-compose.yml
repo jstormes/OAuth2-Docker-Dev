@@ -24,6 +24,7 @@ services:
     ports:
       - 8080:80
     volumes:
+      - ./bin:/root/bin
       - ./authorization-server/:/var/www
       - ./authorization-server/public:/var/www/html
 
