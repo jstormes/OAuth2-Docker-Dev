@@ -18,6 +18,7 @@ services:
       - TZ=America/Chicago
       - DB=mysql://root:AhEP2678@db/auth_db
       - REDIS=redis
+      - XDEBUG_CONFIG="remote_host=host.docker.internal remote_port=9000 remote_autostart=1"
     ports:
       - 8080:80
     volumes:
