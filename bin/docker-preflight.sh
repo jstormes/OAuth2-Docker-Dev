@@ -28,7 +28,7 @@ fi
 # Setup XDebug, always try and start XDebug connection to requesting ip
 # DO NOT DO THIS ON PUBLICLY ACCESSIBLE SYSTEMS!!!!!!!
 ############################################################################
-if [[ ! $(find /usr/local/lib/php/extensions/ -name xdebug.so &> /dev/null) ]];
+if [[ ! $(find /usr/local/lib/php/extensions/ -name xdebug.so) ]];
 then
     echo "Installing XDEBUG"
     yes | pecl install xdebug
@@ -44,10 +44,10 @@ fi
 # set host.docker.internal if it is not set
 ############################################################################
 apt-get install -y inetutils-ping iproute2 &> /dev/null
-if [[ ! $(ping -c 1 host.docker.internal &> /dev/null) ]];
-then
-  echo "Adding host host.docker.internal\n\n"
+if ! ping -c 1 -W 1 "host.docker.internal"; then
+  echo "Adding host host.docker.internal"
   ip -4 route list match 0/0 | awk '{print $3 " host.docker.internal"}' >> /etc/hosts
+  ping -c 1 -W 1 "host.docker.internal"
 fi
 
 ############################################################################

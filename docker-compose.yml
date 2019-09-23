@@ -16,9 +16,12 @@ services:
     build: ./authorization-server
     environment:
       - TZ=America/Chicago
-      - DB=mysql://root:AhEP2678@db/auth_db
-      - REDIS=redis
+      - DB=mysql://auth:naked@db/auth_db
+      - REDIS=redis://redis
       - XDEBUG_CONFIG="remote_host=host.docker.internal remote_port=9000 remote_autostart=1"
+      - PHP_IDE_CONFIG=serverName=docker-cli
+      - PMA_USER=root          # Do Not set this in production !!!!
+      - PMA_PASSWORD=AhEP2678  # Do Not set this in production !!!!
     ports:
       - 8080:80
     volumes:
