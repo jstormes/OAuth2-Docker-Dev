@@ -16,14 +16,17 @@ services:
     build: ./authorization-server
     environment:
       - TZ=America/Chicago
-      - DB=mysql://auth:naked@db/auth_db
-      - REDIS=redis://redis
+      - DB=mysql://auth:naked@db:3306/auth
+      - HISTORY_DB=mysql://auth:naked@db:3306/auth_history
+#      - REDIS=redis://redis
+#      - LDAP=msldap://adserver  # or openldap://ldapserver
+#      - OAUTH2=phpoauth2://client_id:secreat@oauth2.loopback.world/return_url
       - XDEBUG_CONFIG="remote_host=host.docker.internal remote_port=9000 remote_autostart=1"
       - PHP_IDE_CONFIG=serverName=docker-cli
       - PMA_USER=root          # Do Not set this in production, for self db creation only !!!!
       - PMA_PASSWORD=AhEP2678  # Do Not set this in production, for self db creation only !!!!
     ports:
-      - 8080:80
+      - 9080:80
     volumes:
       - ./bin:/root/bin                             # Allow the master git project to interact with Docker container
       - ./authorization-server/:/var/www            # Override the web root
@@ -39,7 +42,7 @@ services:
       - TZ=America/Chicago
       - REDIS_1_HOST=redis
     ports:
-      - 8081:80
+      - 9081:80
 
 
 ####### Maria DB ########
@@ -48,6 +51,8 @@ services:
     environment:
       - TZ=America/Chicago
       - MYSQL_ROOT_PASSWORD=AhEP2678
+    ports:
+      - 5000:3306
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     environment:
@@ -55,7 +60,7 @@ services:
       - PMA_USER=root
       - PMA_PASSWORD=AhEP2678
     ports:
-      - 8082:80
+      - 9082:80
 
 
 ####### Open LDAP #######
@@ -66,4 +71,4 @@ services:
     environment:
       - PHPLDAPADMIN_LDAP_HOSTS=ldap
     ports:
-      - 8083:443
+      - 9083:443
